@@ -50,7 +50,10 @@ func (self *UserController) OffOnline(w http.ResponseWriter, request *commom.Htt
 	}
 	if commom.NewOnline().IsOnline(userId) {
 		commom.NewOnline().OffOnline(userId)
-		queue.New().WriteCh()
+		//如果有人在排队，打开队列阻塞
+		if queue.New().QueueLength() > 0{
+			queue.New().WriteCh()
+		}
 		fmt.Println(userId, "离开，目前在线人数", commom.NewOnline().GetCurrentNum())
 	}
 }
