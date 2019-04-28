@@ -1,0 +1,48 @@
+{
+  "console": {
+    "enable": true,
+    "level": "CRITICAL"
+  },
+  "files": [
+    {
+      "enable": true,
+      "level": "INFO",
+      "filename": "./logs/start.log",
+      "category": "START",
+      "pattern": "[%D %T] [%C] [%L] (%S) %M",
+      "daily": true
+    },
+    {
+      "enable": true,
+      "level": "INFO",
+      "filename": "./logs/request.log",
+      "category": "REQUEST",
+      "pattern": "[%D %T] [%C] [%L] (%S) %M",
+      "daily": true
+    },
+    {
+      "enable": true,
+      "level": "INFO",
+      "filename": "./logs/request_error.log",
+      "category": "REQUEST_ERROR",
+      "pattern": "[%D %T] [%C] [%L] (%S) %M",
+      "daily": true
+    },
+    {
+      "enable": true,
+      "level": "INFO",
+      "filename": "./logs/data_error.log",
+      "category": "DATA_ERROR",
+      "pattern": "[%D %T] [%C] [%L] (%S) %M",
+      "daily": true
+    },
+    {
+      "enable": true,
+      "level": "INFO",
+      "filename": "./logs/access.log",
+      "category": "ACCESS",
+      "pattern": "[%D %T] [%C] [%L] (%S) %M",
+      "daily": true
+    }
+  ]
+}

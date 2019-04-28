@@ -1,0 +1,9 @@
+{
+  "server_addr":":8080",
+  "logPath":"/Users/homework/data/work/gowork/queueup/logs",
+  "gameUrl": "www.game.com",
+  "onlineMax":3,
+  "queue":{
+    "maxNum":3
+  }
+}
